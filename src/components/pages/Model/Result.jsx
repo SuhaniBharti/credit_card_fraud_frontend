@@ -23,18 +23,18 @@ const Result = () => {
           {isFraud ? (
             <div className="text-red-600">
               <XCircle size={64} className="mx-auto mb-4" />
-              <h1 className="text-3xl font-bold mb-2">⚠️ Fraud Detected</h1>
+              <h1 className="text-3xl font-bold mb-2"> Fraud Detected</h1>
               <p>This transaction appears suspicious. Please investigate further.</p>
             </div>
           ) : isSafe ? (
             <div className="text-green-600">
               <CheckCircle size={64} className="mx-auto mb-4" />
-              <h1 className="text-3xl font-bold mb-2">✅ Transaction Safe</h1>
+              <h1 className="text-3xl font-bold mb-2">Transaction Safe</h1>
               <p>This transaction does not appear to be fraudulent.</p>
             </div>
           ) : (
             <div className="text-yellow-600">
-              <h1 className="text-2xl font-bold mb-2">⚠️ No Result</h1>
+              <h1 className="text-2xl font-bold mb-2"> No Result</h1>
               <p>Something went wrong or prediction was not received properly.</p>
             </div>
           )}

@@ -14,10 +14,10 @@ const Home = () => {
             Detect fraudulent credit card transactions with the power of AI.
           </p>
           <button
-            onClick={() => navigate("/predict")}
+            onClick={() => navigate("/model")}
             className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-200 transition"
           >
-            🧮 Start Prediction
+             Start Prediction
           </button>
         </div>
       </div>
