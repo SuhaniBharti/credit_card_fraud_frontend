@@ -1,12 +1,127 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#  Credit Card Fraud - Frontend
+ 
 
-Currently, two official plugins are available:
+This is the **React.js** frontend for the Credit card fraud project. It allows users to input a features and receive a prediction from the backend FastAPI model on whether the message is fraud or not
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+FRONTEND/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── layouts/
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── Layout.jsx
+│   ├── pages/
+│   │   ├── About Project/
+│   │   │   ├── AboutProject.jsx
+│   │   │   └── AboutFraud.jsx
+│   │   ├── About Us/
+│   │   │   └── AboutUs.jsx
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   └── ForgetPassword.jsx
+│   │   ├── Home.jsx
+│   │   ├── Error/
+│   │   │   └── Error.jsx
+│   │   ├── Model/
+│   │   │   ├── Predict.jsx
+│   │   │   └── Result.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.jsx
+│   └── ScrollToTop.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+├── vercel.json
+└── vite.config.js
+```
+
+---
+
+##  Getting Started
+
+Follow the instructions below to set up and run the frontend locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/spam-sms-classifier.git
+cd spam-sms-classifier/frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+By default, it runs on: [http://localhost:5173](http://localhost:5173)
+
+Ensure that your FastAPI backend is running at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+---
+
+## 🔗 API Integration
+
+The frontend communicates with the following endpoint:
+
+```
+POST http://127.0.0.1:8000/predict
+```
+
+### Request Body:
+
+```json
+{
+  "Input": "  0.0, -1.3598, -0.07278, 2.5363, 1.3781, -0.3383, 0.4623, 0.2395,
+  0.0986, 0.3637, 0.0907, -0.5515, -0.6178, -0.9913, -0.3111,
+  1.4681, -0.4704, 0.2079, 0.0257, 0.4039, 0.2514, -0.0183,
+  0.2778, -0.1104, 0.0669, 0.1285, -0.1891, 0.1335, -0.0210, 149.62"
+}
+```
+
+### Response:
+
+```json
+{
+  "prediction": "Fraud" // or "Safe"
+}
+```
+
+---
+
+## 🛠 Built With
+
+- React.js (Vite)
+- CSS
+- FastAPI (Backend)
+- Axios (HTTP Requests)
+
+---
+
+
+---
+
+##  License
+All Right Reserved @Data_Seekers team
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
