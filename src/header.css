@@ -1,0 +1,65 @@
+ .custom-navbar {
+   background-color: rgba(0, 0, 0, 0.4); /* Transparent background */
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+} 
+
+ .brand-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+} 
+
+.custom-nav-btn {
+  color: white;
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+} 
+
+ .custom-nav-btn:hover {
+  background-color: rgba(0, 123, 255, 0.8); /* Blue on hover */
+ color: white;
+}
+
+@media (max-width: 996px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+}
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 4px;
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+   .nav-links.show {
+    display: flex !important;  /* Make sure this overrides default */
+  }
+
+
