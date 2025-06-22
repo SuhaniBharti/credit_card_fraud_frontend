@@ -49,17 +49,48 @@ const Predict = () => {
   return (
     <Layout>
       <ToastContainer position="top-center" autoClose={2500} />
-      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-        <div className="w-full max-w-2xl bg-white text-black rounded-2xl p-8 shadow-2xl">
+      {/* <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6"> */}
+        {/* <div className="w-full max-w-2xl bg-white text-black rounded-2xl p-8 shadow-2xl"> */}
+        <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4rem 1rem",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+         <div
+          className="text-center"
+          style={{
+            maxWidth: "900px",
+            width: "100%",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+           //backgroundColor: "		rgb(218, 165, 32,0.5)",
+            borderRadius: "1rem",
+            padding: "2rem",
+            //color: "white",
+          }}
+        >
           <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
              Credit Card Fraud Detection
           </h1>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{
+            display:'flex',
+            flexDirection:'column',
+          }}>
             <label className="text-gray-800 font-semibold mb-2 block text-lg">
               Input 30 comma-separated transaction features:
             </label>
             <textarea
+              style={{
+               borderRadius:'14px',
+               marginBottom:'10px'
+              }}
               rows={6}
               className="w-full border border-gray-300 rounded-lg p-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all bg-gray-50 text-black"
               value={input}
@@ -71,11 +102,13 @@ const Predict = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`mt-6 w-full py-3 rounded-xl font-semibold text-lg transition-all ${
-                loading
-                  ? "bg-blue-300 text-white cursor-not-allowed"
-                  : "bg-blue-600 hover:bg-blue-700 text-white"
+            
+               className={`mt-6 px-6 py-3 mx-auto border-2 border-white rounded-xl bg-transparent font-semibold text-lg transition-all duration-300 ${
+               loading
+                ? "bg-blue-300 text-white cursor-not-allowed"
+               : "text-white hover:bg-white hover:text-blue-600"
               }`}
+
             >
               {loading ? " Predicting..." : " Predict Transaction"}
             </button>

@@ -1,24 +1,98 @@
-import React from "react";
+
+
+
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 import Layout from "../../layouts/Layout";
+import "../../../index.css";
 
 const Home = () => {
   const navigate = useNavigate();
+ // const [typingDone, setTypingDone] = useState(false);
+
+  const handleCheckClick = () => {
+    navigate("/model");
+  };
+
+  const handleSpamClick = () => {
+    navigate("/about-fraud");
+  };
 
   return (
     <Layout>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-600 text-white px-4">
-        <div className="max-w-2xl w-full bg-black/60 backdrop-blur p-8 rounded-2xl text-center shadow-lg">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Fraud Detector</h1>
-          <p className="text-lg mb-6">
-            Detect fraudulent credit card transactions with the power of AI.
-          </p>
-          <button
-            onClick={() => navigate("/model")}
-            className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-200 transition"
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4rem 1rem",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div
+          className="text-center"
+          style={{
+            maxWidth: "900px",
+            width: "100%",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+           //backgroundColor: "		rgb(218, 165, 32,0.5)",
+            borderRadius: "1rem",
+            padding: "2rem",
+            //color: "white",
+          }}
+        >
+          <h1
+            className="display-4 fw-bold"
+            style={{
+              fontFamily: "Merriweather",
+              color: "rgba(137, 207, 240,1)",
+              letterSpacing: "1px",
+            }}
           >
-             Start Prediction
-          </button>
+            <Typewriter
+  words={['WELCOME TO FRAUD DETECTOR']}
+  loop={1}
+  cursor
+  cursorStyle='_'
+  typeSpeed={100}
+  deleteSpeed={0}
+  delaySpeed={1000}
+  // onLoopDone={() => setTypingDone(true)} // ✅ correct callback
+/>
+
+
+
+          </h1>
+    
+
+          <div className="col-lg-8 mx-auto">
+           
+              <>
+                <p className="animated-text mt-3">
+                  Detect fraudulent credit card transactions with the power of AI.
+                </p>
+
+                <div className="arrow bounce"></div>
+
+                <button
+                  type="button"
+                  className="btn btn-outline-light btn-lg px-4 mt-2"
+                  onClick={handleCheckClick}
+                >
+                  Check fraud prediction
+                </button>
+
+                <div className="subtle-link">
+                  To know more about fraud messages,{" "}
+                  <span onClick={handleSpamClick}>click here</span>.
+                </div>
+              </>
+            
+          </div>
         </div>
       </div>
     </Layout>

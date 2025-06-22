@@ -7,9 +7,19 @@ import ScrollToTop from "../src/ScrollToTop";
 import Home from "./components/pages/Home/Home";
 import Predict from "./components/pages/Model/Predict";
 import Result from "./components/pages/Model/Result";
-
+import Aboutfraud from "./components/pages/About-fraud/Aboutfraud";
+import AboutUs from "./components/pages/About Us/AboutUs";
+import AboutProject from "./components/pages/AboutProject/AboutProject";
+import bgImage from './assets/b4.jpg';
 function App() {
   return (
+    <>
+    <img
+        src={bgImage}
+        alt="background"
+        className="fullscreen-bg"
+      />
+    
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
@@ -17,8 +27,12 @@ function App() {
         <Route path="*" element={<Error />} />
         <Route path="/model" element={<Predict />} />
         <Route path="/predict" element={<Result />} />
+        <Route path="/about-fraud" element={<Aboutfraud />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/AboutProject" element={<AboutProject/>}/>
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 export default App;
