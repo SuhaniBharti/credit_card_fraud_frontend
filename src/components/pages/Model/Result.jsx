@@ -13,8 +13,33 @@ const Result = () => {
 
   return (
     <Layout>
-      <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 px-4">
-        <div className="bg-white text-black p-10 rounded-2xl shadow-xl max-w-xl w-full text-center">
+      {/* <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 px-4">
+        <div className="bg-white text-black p-10 rounded-2xl shadow-xl max-w-xl w-full text-center"> */}
+          <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4rem 1rem",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+         <div
+          className="text-center"
+          style={{
+            maxWidth: "900px",
+            width: "100%",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+           //backgroundColor: "		rgb(218, 165, 32,0.5)",
+            borderRadius: "1rem",
+            padding: "2rem",
+            //color: "white",
+          }}
+        >
+        
           <h2 className="text-lg text-gray-700 mb-2 font-medium">Input Features:</h2>
           <p className="text-sm bg-gray-100 p-3 rounded-lg border border-gray-300 mb-6 text-gray-800 break-words">
             {features}
@@ -38,6 +63,7 @@ const Result = () => {
               <p>Something went wrong or prediction was not received properly.</p>
             </div>
           )}
+         
         </div>
       </div>
     </Layout>

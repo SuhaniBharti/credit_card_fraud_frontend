@@ -39,19 +39,20 @@ const Aboutfraud = () => {
           </h1>
 
           <p>
-          Fraud messages, also known as spam SMS, are unwanted or deceptive text messages sent by scammers. These messages often:
-</p>
+          Payment frauds are deceptive practices aimed at tricking individuals into revealing sensitive financial information or unknowingly authorizing unauthorised transactions.
+           </p>
 <p>
   <ul>
-        <li> Pretend to be from a bank, government, or trusted company</li>
+        <li> Posing as banks, payment apps, or trusted merchants</li>
 
-        <li>Ask for personal information, like OTPs or card numbers</li>
+        <li>Requesting confidential details like card numbers, CVVs, UPI PINs, or OTPs</li>
 
-        <li>Contain suspicious links or fake offers to trick users</li>
+        <li>Sending fake payment links or QR codes to manipulate users into making payments</li>
 
-        <li>These can lead to financial loss, data theft, or identity fraud if a user falls for them.</li>
+        <li>Claiming failed transactions or refunds to bait users into sharing access</li>
   </ul>
 
+  Falling for such tactics can result in direct financial loss, compromised bank accounts, or unauthorized transactions — making awareness and caution essential.
           </p>
 
          
