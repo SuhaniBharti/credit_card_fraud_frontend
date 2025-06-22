@@ -36,8 +36,8 @@ const AboutProject = () => {
         alignItems: 'center',
       }}>
         <div style={{
-          width: '100%',//100%
-          maxWidth: '1000px',//1000px
+          width: '100%',
+          maxWidth: '1000px',
           backgroundColor: 'rgba(13, 50, 89, 0.8)',
           color: 'white',
           borderRadius: '40px',
