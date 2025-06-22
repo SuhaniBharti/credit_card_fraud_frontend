@@ -48,7 +48,7 @@ const AboutUs = () => {
           <p style={{ color: '#ccc' }}>
             The solution has been plotted and implemented by combined efforts of:-</p>
           <ul style={{ color: '', marginTop: '10px' }}>
-          <li><strong>Tapash Jaiswal</strong> – Data Engineering, Machine Learning, Deep Learning, MLops</li>
+          <li><strong>Tapash Jaiswal</strong> – Data Engineering, Machine Learning, Deep Learning, MLOps</li>
           <li><strong>Sumana Dangar</strong> – Data Analyst, UI/UX Designer</li>
           <li><strong>Satish Singh</strong> – Database Management and Backend Developer, DevOps</li>
           <li><strong>Suhani Bharti</strong> – Frontend Developer, UI/UX Designer</li>
