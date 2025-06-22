@@ -41,7 +41,12 @@ const Result = () => {
         >
         
           <h2 className="text-lg text-gray-700 mb-2 font-medium">Input Features:</h2>
-          <p className="text-sm bg-gray-100 p-3 rounded-lg border border-gray-300 mb-6 text-gray-800 break-words">
+          <p className="text-sm bg-gray-100 p-3 rounded-lg border border-gray-300 mb-6 text-gray-800 "
+          style={{
+        wordBreak: 'break-word',     
+         whiteSpace: 'normal',        
+         overflowWrap: 'anywhere',    
+  }}>
             {features}
           </p>
 
