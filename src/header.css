@@ -1,19 +1,25 @@
- .custom-navbar {
-   background-color: rgba(0, 0, 0, 0.4); /* Transparent background */
+.custom-navbar {
+     /* position: fixed; */
+      position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
   border-radius: 20px;
   backdrop-filter: blur(8px);
   margin: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2); 
-} 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
- .brand-text {
+.brand-text {
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
   text-decoration: none;
-} 
+}
 
 .custom-nav-btn {
   color: white;
@@ -23,43 +29,81 @@
   border-radius: 12px;
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
-} 
-
- .custom-nav-btn:hover {
-  background-color: rgba(0, 123, 255, 0.8); /* Blue on hover */
- color: white;
 }
 
+.custom-nav-btn:hover {
+  background-color: rgba(0, 123, 255, 0.8); /* Blue on hover */
+  color: white;
+}
+
+.logo-img {
+  height: auto;
+  max-height: 50px;
+  
+}
+
+
+/* Responsive Styles */
 @media (max-width: 996px) {
-  .nav-links {
+    
+  .nav-avatar {
     display: none;
+  }
+
+  .nav-links-small {
+    display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #111;
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 10px;
+    justify-content: space-between;
   }
 }
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    background: none;
-    border: none;
-    gap: 4px;
+@media (max-width: 500px) {
+  .logo-img {
+    width: 120px;
   }
+}
 
-  .hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
-  }
-   .nav-links.show {
-    display: flex !important;  /* Make sure this overrides default */
-  }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.nav-avatar {
+  gap: 1rem;
+}
 
 
+.custom-navbar {
+  transition: top 0.3s ease-in-out;
+}
+
+.custom-navbar.hide {
+  top: -100px; /* moves navbar out of view */
+}
+
+.custom-navbar.show {
+  top: 0;
+}
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

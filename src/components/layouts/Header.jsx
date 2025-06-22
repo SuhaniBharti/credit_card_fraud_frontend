@@ -1,46 +1,74 @@
+
+
+
+
 import user from '../../assets/user.png';
 import '../../header.css';
 import dataseekers from '../../assets/dataseekers.png';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        // scrolling down
+        setShowNavbar(false);
+      } else {
+        // scrolling up
+        setShowNavbar(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="custom-navbar py-3">
+    <header className={`custom-navbar py-3 ${showNavbar ? 'show' : 'hide'}`}>
       <div className="container">
-        <div className="d-flex flex-wrap align-items-center justify-content-between">
-          {/* Logo */}
+        {/* <div className="d-flex flex-wrap align-items-center justify-content-space-between">
+         */}
+         <div className="d-flex flex-wrap align-items-center justify-content-between w-100">
+
           <div className="d-flex align-items-center">
-            <img
-              src={dataseekers}
-              alt="DATA SEEKERS"
-              className="logo-img"
-            />
+            <img src={dataseekers} alt="DATA SEEKERS" className="logo-img" />
           </div>
 
-          {/* Hamburger (visible only below 996px) */}
           <button className="hamburger d-lg-none" onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
           </button>
 
-          {/* Navigation Links (show below 996px only when menu is open OR show by default on lg+) */}
-          <ul className={`nav nav-links ${menuOpen ? 'show' : ''}`}>
-            <li><a href="/" className="nav-link custom-nav-btn">Home</a></li>
-            <li><a href="#" className="nav-link custom-nav-btn">About Us</a></li>
-            <li><a href="#" className="nav-link custom-nav-btn">About Project</a></li>
-          </ul>
+          {menuOpen && (
+            <ul className="nav nav-links d-lg-none w-100 flex-column mt-3">
+              <li><a href="/" className="nav-link custom-nav-btn">Home</a></li>
+              <li><a href="/AboutUs" className="nav-link custom-nav-btn">About Us</a></li>
+              <li><a href="/AboutProject" className="nav-link custom-nav-btn">About Project</a></li>
+            </ul>
+          )}
 
-           
-
-          {/* Avatar (optional) */}
-          <div className="dropdown text-end d-none d-lg-block">
+          <div className="d-none d-lg-flex align-items-center gap-3 ">
+            <ul className="nav nav-links mb-0">
+              <li><a href="/" className="nav-link custom-nav-btn">Home</a></li>
+              <li><a href="/AboutUs" className="nav-link custom-nav-btn">About Us</a></li>
+              <li><a href="/AboutProject" className="nav-link custom-nav-btn">About Project</a></li>
+            </ul>
             <a
               href="#"
               className="d-block link-light text-decoration-none"

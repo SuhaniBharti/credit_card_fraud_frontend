@@ -1,0 +1,77 @@
+/* .image-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.hover-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+  display: block;
+  border-radius: 12px;
+}
+.image-wrapper:hover .hover-image {
+  transform: scale(0.96); /* slight shrink */
+  /* width:50%;
+  display:'flex';
+  flex-direction:'column';
+  justify-content:'center';
+  align-items: 'center';
+  box-sizing: border-box; */
+/* } */
+/* .caption { */
+  /* position: absolute; */
+  /* bottom: 10px;
+  left: 20px;
+  opacity: 0;
+  color: white;
+  font-size: 1rem;
+  transition: opacity 0.4s ease; */
+/* } */ */
+/* 
+.image-wrapper:hover .caption {
+  opacity: 1;
+} */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.onhover {
+  display: flex;
+   align-items: center;
+  /*justify-content: space-between; */
+  width: 100%;
+  transition: all 0.4s ease;
+  /* gap: 20px; */
+}
+
+.hover-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, width 0.4s ease;
+}
+
+.caption {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: white;
+  font-size: 1rem;
+  max-width: 40%;
+}
+
+.onhover:hover .hover-image {
+  width: 60%;
+  transform: scale(0.96);
+}
+
+.onhover:hover .caption {
+  opacity: 1;
+}
