@@ -1,6 +1,6 @@
 
 #  Credit Card Fraud - Frontend
- 
+[Live : https://credit-card-fraud-frontend-ruby.vercel.app] 
 
 This is the **React.js** frontend for the Credit card fraud project. It allows users to input a features and receive a prediction from the backend FastAPI model on whether the message is fraud or not
 
