@@ -99,6 +99,8 @@ POST http://127.0.0.1:8000/predict
 }
 ```
 
+PYTHON_VERSION  3.10.13
+
 ### Response:
 
 ```json

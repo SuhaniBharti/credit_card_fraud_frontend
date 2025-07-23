@@ -22,7 +22,7 @@ const Predict = () => {
     }
 
     try {
-      const response = await fetch("https://credit-card-fraud-backend.onrender.com/predict", {
+      const response = await fetch("http://localhost:8000/predict2", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features }),
@@ -32,7 +32,7 @@ const Predict = () => {
       toast.success(" Prediction complete!");
 
       setTimeout(() => {
-        navigate("/predict", {
+        navigate("/predict2", {
           state: {
             result: data.prediction,
             features: input,

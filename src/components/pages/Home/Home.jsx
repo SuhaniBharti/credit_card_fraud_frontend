@@ -1,7 +1,4 @@
-
-
-
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import Layout from "../../layouts/Layout";
@@ -9,14 +6,17 @@ import "../../../index.css";
 
 const Home = () => {
   const navigate = useNavigate();
- // const [typingDone, setTypingDone] = useState(false);
 
-  const handleCheckClick = () => {
-    navigate("/model");
+  const handleModel1 = () => {
+    navigate("/model1"); // Spam Message Classifier
   };
 
-  const handleSpamClick = () => {
-    navigate("/about-fraud");
+  const handleModel2 = () => {
+    navigate("/model2"); // Fraud Detection by Bank Features
+  };
+
+  const handleModel3 = () => {
+    navigate("/model3"); // Fraud Detection by Bank Details
   };
 
   return (
@@ -39,10 +39,8 @@ const Home = () => {
             maxWidth: "900px",
             width: "100%",
             backgroundColor: "rgba(13, 50, 89, 0.8)",
-           //backgroundColor: "		rgb(218, 165, 32,0.5)",
             borderRadius: "1rem",
             padding: "2rem",
-            //color: "white",
           }}
         >
           <h1
@@ -54,44 +52,52 @@ const Home = () => {
             }}
           >
             <Typewriter
-  words={['WELCOME TO FRAUD DETECTOR']}
-  loop={1}
-  cursor
-  cursorStyle='_'
-  typeSpeed={100}
-  deleteSpeed={0}
-  delaySpeed={1000}
-  // onLoopDone={() => setTypingDone(true)} // ✅ correct callback
-/>
-
-
-
+              words={["WELCOME TO FRAUD DETECTOR"]}
+              loop={1}
+              cursor
+              cursorStyle="_"
+              typeSpeed={100}
+              deleteSpeed={0}
+              delaySpeed={1000}
+            />
           </h1>
-    
 
           <div className="col-lg-8 mx-auto">
-           
-              <>
-                <p className="animated-text mt-3">
-                  Detect fraudulent credit card transactions with the power of AI.
-                </p>
+            <p className="animated-text mt-3">
+              Detect fraudulent credit card transactions with the power of AI.
+            </p>
 
-                <div className="arrow bounce"></div>
+            <div className="arrow bounce"></div>
 
-                <button
-                  type="button"
-                  className="btn btn-outline-light btn-lg px-4 mt-2"
-                  onClick={handleCheckClick}
-                >
-                  Check fraud prediction
-                </button>
+            {/* Three model buttons */}
+            <div className="d-grid gap-3 mt-4">
+              <button
+                type="button"
+                className="btn btn-outline-light btn-lg px-4"
+                onClick={handleModel1}
+              >
+                Model 1: Spam Message Classifier
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-light btn-lg px-4"
+                onClick={handleModel2}
+              >
+                Model 2: Bank Feature Fraud Detector
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-light btn-lg px-4"
+                onClick={handleModel3}
+              >
+                Model 3: Bank Detail Fraud Detector
+              </button>
+            </div>
 
-                <div className="subtle-link">
-                  To know more about fraud messages,{" "}
-                  <span onClick={handleSpamClick}>click here</span>.
-                </div>
-              </>
-            
+            <div className="subtle-link mt-3">
+              To know more about fraud messages,{" "}
+              <span onClick={() => navigate("/about-fraud")}>click here</span>.
+            </div>
           </div>
         </div>
       </div>
