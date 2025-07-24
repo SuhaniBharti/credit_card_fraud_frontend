@@ -59,7 +59,7 @@ const Home = () => {
             }}
           >
             <Typewriter
-              words={["WELCOME TO FRAUD DETECTOR"]}
+              words={["WELCOME TO FRAUD DETECTION DASHBOARD"]}
               loop={1}
               cursor
               cursorStyle="_"
@@ -71,7 +71,7 @@ const Home = () => {
 
           <div className="col-lg-8 mx-auto">
             <p className="animated-text mt-3">
-              Detect fraudulent credit card transactions with the power of AI.
+             Analyze suspicious content using AI-powered models to detect spam messages, bank feature fraud, and fraudulent bank details — all in one place
             </p>
 
             <div className="arrow bounce"></div>
