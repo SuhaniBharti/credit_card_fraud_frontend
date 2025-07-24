@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import Layout from "../../layouts/Layout";
+import bgImage from '../../../assets/white.jpg';
 import "../../../index.css";
 
 const Home = () => {
@@ -20,7 +21,13 @@ const Home = () => {
   };
 
   return (
+    
     <Layout>
+       {/* <img
+              src={bgImage}
+              alt="background"
+              className="fullscreen-bg"
+            /> */}
       <div
         style={{
           minHeight: "100vh",

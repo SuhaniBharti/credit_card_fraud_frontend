@@ -16,7 +16,7 @@ const Predict = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/predict1",
+        "https://spam-sms-classifier-backend.onrender.com/predict1",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

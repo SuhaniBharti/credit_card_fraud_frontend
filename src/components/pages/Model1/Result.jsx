@@ -31,24 +31,31 @@ const Result = () => {
 
   return (
     <Layout>
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f8f9fa',
-        padding: '40px'
-      }}>
-        <div style={{
-          maxWidth: '700px',
-          width: '100%',
-          backgroundColor: '#ffffff',
-          borderRadius: '20px',
-          padding: '40px',
-          boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-          textAlign: 'center',
-          fontFamily: 'Segoe UI, sans-serif'
-        }}>
+    
+        <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4rem 1rem",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+         <div
+          className="text-center"
+          style={{
+            maxWidth: "900px",
+            width: "100%",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+           //backgroundColor: "		rgb(218, 165, 32,0.5)",
+            borderRadius: "1rem",
+            padding: "2rem",
+            //color: "white",
+          }}
+        >
           <h2 style={{ fontSize: '22px', marginBottom: '12px', color: '#6c757d' }}>Original Message:</h2>
           <p style={{
             fontSize: '20px',

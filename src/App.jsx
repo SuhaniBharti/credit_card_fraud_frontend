@@ -15,6 +15,10 @@ import Aboutfraud from "./components/pages/About-fraud/Aboutfraud";
 import AboutUs from "./components/pages/About Us/AboutUs";
 import AboutProject from "./components/pages/AboutProject/AboutProject";
 import bgImage from './assets/b4.jpg';
+import Chatbot from './components/pages/Chatbot/Chatbot'
+import Securitytips from "./components/pages/Securitytips/Securitytips";
+import Message from "./components/pages/Message/Message";
+import Faq from "./components/pages/Faq/Faq";
 function App() {
   return (
     <>
@@ -38,6 +42,11 @@ function App() {
         <Route path="/about-fraud" element={<Aboutfraud />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/AboutProject" element={<AboutProject/>}/>
+        <Route path="/Chatbot" element={<Chatbot/>}/>
+        <Route path="/Securitytips" element={<Securitytips/>}/>
+        <Route path="/Faq" element={<Faq/>}/>
+        <Route path="/Message" element={<Message/>}/>
+
       </Routes>
     </BrowserRouter>
     </>

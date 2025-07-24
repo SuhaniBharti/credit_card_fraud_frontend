@@ -5,6 +5,7 @@
 import user from '../../assets/user.png';
 import '../../header.css';
 import dataseekers from '../../assets/dataseekers.png';
+import uco from '../../assets/uco.png'
 import { useState, useEffect, useRef } from 'react';
 
 
@@ -46,6 +47,11 @@ const Header = () => {
          <div className="d-flex flex-wrap align-items-center justify-content-between w-100">
 
           <div className="d-flex align-items-center">
+             <img src={uco} alt="UCO" className="logo-img" 
+             style={{height:'100px',width:'100px',
+              marginRight:'2rem',
+             }}/>
+
             <img src={dataseekers} alt="DATA SEEKERS" className="logo-img" />
           </div>
 
