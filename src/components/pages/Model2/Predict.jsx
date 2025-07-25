@@ -22,7 +22,13 @@ const Predict = () => {
     }
 
     try {
-      const response = await fetch("https://credit-card-fraud-backend-abg2.onrender.com/predict2", {
+      // const response = await fetch("http://127.0.0.1:8002/predict2", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ features }),
+      // });
+
+        const response = await fetch("https://credit-card-fraud-backend.onrender.com/predict2", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features }),

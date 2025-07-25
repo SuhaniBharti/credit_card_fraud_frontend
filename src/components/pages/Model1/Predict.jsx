@@ -15,7 +15,16 @@ const Predict = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(
+      // const response = await fetch(
+      //   "http://127.0.0.1:8000/predict1",
+      //   {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify({ text: text }),
+      //   }
+      // );
+
+         const response = await fetch(
         "https://spam-sms-classifier-backend.onrender.com/predict1",
         {
           method: "POST",
