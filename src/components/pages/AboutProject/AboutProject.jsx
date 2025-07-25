@@ -2,22 +2,33 @@
 
 import React from 'react';
 import Layout from '../../layouts/Layout';
+import spamwords from '../../../assets/spamwords.png';
+import accu from '../../../assets/accspam.png'
 import classdistr from '../../../assets/clasdistri.png';
 import featureimp from '../../../assets/featureimp.jpg';
 import transactio from '../../../assets/creditcardtransaction.png';
 import transac from '../../../assets/transac.jpg';
+import precrecall from '../../../assets/precisionrecall.png';
+import roc from '../../../assets/roc.png';
 import '../../../AboutProject.css'; // create this for styles
 
 
 const imageCaptions = [
+  "Most common spam words",
+  "Confusion matrix(Spam Classifier)",
   "Class Distribution Analysis",
    "Credit Card Transaction",
     "Preprocessed Transaction Image",
   "Feature Importance Chart",
+  "Precision-recall curve(Banksim Model)",
+  "ROC-curve curve(Banksim Model)"
+  
  
  
 ];
 const description=[
+  "These are most common spam words used in spam messages",
+  "The efficiency of our model is clearly demonstrated through this confusion matrix",
     "While cleaning & transforming data and undertstanding data we came to know that only 492 (or 0.172%) of transaction are fraudulent. That means the data is highly unbalanced with respect with target variable Class.",
      "Fraudulent transactions have a distribution more even than valid transactions - are equaly distributed in time, including the low real transaction times, during night in Europe timezone.",
      "The graph displays the average amount of transactions across different hours of the day for two different classes — likely non-fraudulent (left) and fraudulent (right) transactions.",
@@ -49,8 +60,8 @@ const AboutProject = () => {
         }}>
           <h1 style={{ marginBottom: '30px', textAlign: 'center' }}>OUR PROJECT</h1>
           <p>This project involves building and evaluating various machine learning models to detect fraudulent transactions in a credit card dataset.</p>
-          {/* Render all 4 images */}
-          {[classdistr, transactio,  transac,featureimp].map((imgSrc, index) => (
+          
+          {[spamwords,accu,classdistr, transactio,  transac,featureimp,precrecall,roc].map((imgSrc, index) => (
             <div className="image-wrapper" key={index}>
                 <div className='image-container'>
                 <h1>{imageCaptions[index]}</h1>

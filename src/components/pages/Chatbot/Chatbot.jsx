@@ -57,6 +57,7 @@ const Chatbot = () => {
             }}
           >
             <div
+            
               className="security-tips"
               style={{
                 width: "50%",
@@ -65,6 +66,7 @@ const Chatbot = () => {
               }}
               onClick={() => navigate("/Securitytips")}
             >
+              <h1>Security Tips</h1>
               <img
                 className="hover-scale"
                 style={{
@@ -86,6 +88,7 @@ const Chatbot = () => {
               }}
               onClick={() => navigate("/Faq")}
             >
+              <h1>Faqs</h1>
               <img
                 className="hover-scale"
                 style={{
@@ -117,6 +120,7 @@ const Chatbot = () => {
               }}
               onClick={() => navigate("/Message")}
             >
+              <h1>Chat-help</h1>
               <img
                 className="hover-scale"
                 style={{

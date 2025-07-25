@@ -1,11 +1,11 @@
 .custom-navbar {
-     /* position: fixed; */
+   
       position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   backdrop-filter: blur(8px);
   margin: 0.5rem;
@@ -32,7 +32,7 @@
 }
 
 .custom-nav-btn:hover {
-  background-color: rgba(0, 123, 255, 0.8); /* Blue on hover */
+  background-color: rgba(0, 123, 255, 0.8); 
   color: white;
 }
 
@@ -43,7 +43,7 @@
 }
 
 
-/* Responsive Styles */
+
 @media (max-width: 996px) {
     
   .nav-avatar {
@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 610px) {
   .logo-img {
     width: 120px;
   }
@@ -96,7 +96,7 @@
 }
 
 .custom-navbar.hide {
-  top: -100px; /* moves navbar out of view */
+  top: -100px; 
 }
 
 .custom-navbar.show {
