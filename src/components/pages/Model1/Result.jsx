@@ -75,7 +75,7 @@ const Result = () => {
           <h1 style={{ fontSize: '32px', marginBottom: '20px', color: isSpam ? '#dc3545' : '#198754' }}>
             {displayText}
           </h1>
-          <p style={{ fontSize: '18px', color: '#495057' }}>{description}</p>
+          <p style={{ fontSize: '18px', color: 'white' }}>{description}</p>
         </div>
       </div>
     </Layout>
